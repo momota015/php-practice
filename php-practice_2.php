@@ -72,9 +72,9 @@ class Student
     }
 }
 
-$a = new Student(120, '山田');
+$user = new Student(120, '山田');
 
-echo $a->attend();
+echo $user->attend();
 
 
 
@@ -91,15 +91,14 @@ class Student
         $this->studentName = $name;
     }
 
-    public function attend()
+    public function attend($kyoka)
     {
-        return "{$this->studentName}はPHPの授業に参加しました。学籍番号：{$this->studentId}";
+        return "{$this->studentName}は{$kyoka}の授業に参加しました。学籍番号：{$this->studentId}";
     }
 }
 
-$a = new Student(120, '山田');
-
-echo $a->attend();
+$yamada = new Student(120, '山田');
+echo $yamada->attend('PHP');
 
 
 
